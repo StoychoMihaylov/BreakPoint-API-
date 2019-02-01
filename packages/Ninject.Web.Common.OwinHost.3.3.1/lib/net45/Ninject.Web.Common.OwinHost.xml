@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ninject.Web.Common.OwinHost</name>
+    </assembly>
+    <members>
+        <member name="T:Ninject.Web.Common.OwinHost.OwinAppBuilderExtensions">
+            <summary>
+            The OWIN app builder extensions.
+            </summary>
+        </member>
+        <member name="F:Ninject.Web.Common.OwinHost.OwinAppBuilderExtensions.NinjectOwinBootstrapperKey">
+            <summary>
+            The ninject OWIN bootstrapper key.
+            </summary>
+        </member>
+        <member name="M:Ninject.Web.Common.OwinHost.OwinAppBuilderExtensions.UseNinjectMiddleware(Owin.IAppBuilder,System.Func{Ninject.IKernel})">
+            <summary>
+            Uses ninject middleware.
+            </summary>
+            <param name="app">The <see cref="T:Owin.IAppBuilder"/> passed in.</param>
+            <param name="createKernel">The kernel callback.</param>
+            <returns>The <see cref="T:Owin.IAppBuilder"/> passed out.</returns>
+        </member>
+        <member name="T:Ninject.Web.Common.OwinHost.OwinBootstrapper">
+            <summary>
+            The Owin bootstrapper.
+            </summary>
+        </member>
+        <member name="F:Ninject.Web.Common.OwinHost.OwinBootstrapper.NinjectOwinRequestScope">
+            <summary>
+            The Ninject Owin request scope.
+            </summary>
+        </member>
+        <member name="M:Ninject.Web.Common.OwinHost.OwinBootstrapper.#ctor(System.Func{Ninject.IKernel})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Web.Common.OwinHost.OwinBootstrapper"/> class.
+            </summary>
+            <param name="createKernelCallback">The create kernel callback function.</param>
+        </member>
+        <member name="M:Ninject.Web.Common.OwinHost.OwinBootstrapper.AddModule(Ninject.Modules.NinjectModule)">
+            <summary>
+            Adds a Ninject module.
+            </summary>
+            <param name="ninjectModule">The Ninject module.</param>
+        </member>
+        <member name="M:Ninject.Web.Common.OwinHost.OwinBootstrapper.Execute(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task})">
+            <summary>
+            Handles the owin context.
+            </summary>
+            <param name="next">The next moddleware factory.</param>
+            <returns>
+            The Ninject moddleware factory.
+            </returns>
+        </member>
+        <member name="T:Ninject.Web.Common.OwinHost.OwinRequestScope">
+            <summary>
+            The Owin request scope.
+            </summary>
+        </member>
+    </members>
+</doc>
